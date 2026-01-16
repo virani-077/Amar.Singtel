@@ -1,0 +1,30 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .qty button {
+    padding: 4px 8px;
+    border-radius: 50%;
+    background-color: #c81d25;
+  }
+
+  .remove {
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 10%;
+    padding: 4px 8px;
+  }
+  
+  .checkout-btn {
+    display: inline-block;
+    background: var(--primary-red);
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+  }
