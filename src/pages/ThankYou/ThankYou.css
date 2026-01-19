@@ -1,4 +1,43 @@
-.thank-you {
-    text-align: center;
-    padding: 60px 20px;
-  }
+.thankyou {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fb;
+  padding: 20px;
+}
+
+.thankyou-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.thankyou-card h1 {
+  color: #0a7cff; /* Amar Singtel theme blue */
+  margin-bottom: 10px;
+}
+
+.thankyou-card p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.btn-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: #0a7cff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-home:hover {
+  background: #085ec7;
+}

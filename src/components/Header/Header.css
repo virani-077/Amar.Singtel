@@ -1,5 +1,5 @@
 .header {
-  background: var(--primary-red);
+  background: white;
   padding: 12px 0;
 }
 
@@ -17,14 +17,15 @@
 }
 
 .logo img {
-  height: 90px;
+  height: 100px;
 }
 
 .brand-name {
   margin-left: 10px;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 800;
   color: white;
+  color:  var(--primary-red);
 }
 
 /* Navigation */
@@ -34,7 +35,7 @@
 }
 
 .nav a {
-  color: var(--text-light);
+  color: var(--primary-red);
   margin-left: 20px;
   font-weight: 500;
 }

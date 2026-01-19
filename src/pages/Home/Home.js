@@ -19,20 +19,6 @@ const Home = () => {
 
   return (
     <>
-      {/* VIDEO BANNER */}
-      <section className="video-banner">
-        <video autoPlay muted loop preload="none">
-          <source src={video} type="video/mp4" />
-        </video>
-        <div className="video-overlay">
-          <h1>Amar Singtel</h1>
-          <p>Pure. Traditional. Trusted Oils</p>
-          <Link to="/products" className="video-btn">
-            Explore Products
-          </Link>
-        </div>
-      </section>
-
       {/* HERO */}
       <section className="hero">
         <div className="container hero-inner">
@@ -51,19 +37,17 @@ const Home = () => {
         </div>
       </section>
 
-      {/* PRODUCT CAROUSEL */}
-      <section className="carousel">
-        <h2>Our Products</h2>
-        <div className="carousel-box">
-          <button onClick={prev}>❮</button>
-
-          <div className="carousel-card">
-            <img src={products[index].image} alt="" />
-            <h3>{products[index].name}</h3>
-            {/* <p>₹{products[index].price}</p> */}
-          </div>
-
-          <button onClick={next}>❯</button>
+      {/* VIDEO BANNER */}
+      <section className="video-banner">
+        <video autoPlay muted loop preload="none">
+          <source src={video} type="video/mp4" />
+        </video>
+        <div className="video-overlay">
+          <h1>Amar Singtel</h1>
+          <p>Pure. Traditional. Trusted Oils</p>
+          <Link to="/products" className="video-btn">
+            Explore Products
+          </Link>
         </div>
       </section>
 
@@ -97,6 +81,22 @@ const Home = () => {
               <p>Hygienic and sealed for freshness</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* PRODUCT CAROUSEL */}
+      <section className="carousel">
+        <h2>Our Products</h2>
+        <div className="carousel-box">
+          <button onClick={prev}>❮</button>
+
+          <div className="carousel-card">
+            <img src={products[index].image} alt="" />
+            <h3>{products[index].name}</h3>
+            {/* <p>₹{products[index].price}</p> */}
+          </div>
+
+          <button onClick={next}>❯</button>
         </div>
       </section>
 

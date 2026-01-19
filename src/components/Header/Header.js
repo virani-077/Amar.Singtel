@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
-import logo from "../../assets/images/logo.jpeg";
+import logo from "../../assets/images/Final Logo.svg";
 import "./Header.css";
 
 const Header = () => {
