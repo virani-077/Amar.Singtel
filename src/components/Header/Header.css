@@ -59,7 +59,7 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  colour: var(--primary-red);
+  background: var(--primary-red);
   margin: 4px 0;
 }
 
