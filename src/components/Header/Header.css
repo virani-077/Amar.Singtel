@@ -59,9 +59,8 @@
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: #fff;
-  margin: 4px 0;
   colour: var(--primary-red);
+  margin: 4px 0;
 }
 
 /* ---------------- MOBILE ---------------- */
