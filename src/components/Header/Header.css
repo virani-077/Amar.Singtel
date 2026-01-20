@@ -54,6 +54,7 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
+  colour: var(--primary-red);
 }
 
 .hamburger span {
@@ -61,7 +62,7 @@
   height: 3px;
   background: #fff;
   margin: 4px 0;
-  colour: var(--primary-red);
+  
 }
 
 /* ---------------- MOBILE ---------------- */
