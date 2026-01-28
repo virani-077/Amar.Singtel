@@ -145,7 +145,7 @@ const Home = () => {
             </div>
 
             <div className="why-card">
-              <h4>🧪 No Chemicals</h4>
+              <h4>⚗️ No Chemicals</h4>
               <p>Free from hexane, preservatives, and additives.</p>
             </div>
 
