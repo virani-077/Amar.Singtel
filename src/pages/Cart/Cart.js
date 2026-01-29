@@ -13,19 +13,28 @@ const Cart = () => {
     <div className="container cart">
       <h2>Your Cart</h2>
 
-      {cart.length === 0 && <p>Cart is empty</p>}
+      {cart.length === 0 && <p className="empty">Cart is empty</p>}
 
       {cart.map((item) => (
         <div key={item.id} className="cart-item">
-          <h4>{item.name}</h4>
+          <div className="cart-info">
+            <h4>{item.name}</h4>
+            <p className="price">₹{item.price}</p>
+          </div>
 
           <div className="qty">
-            <button onClick={() => decreaseQty(item.id)}>-</button>
+            <button
+              onClick={() => decreaseQty(item.id)}
+              disabled={item.qty === 1}
+              className={item.qty === 1 ? "disabled" : ""}
+            >
+              -
+            </button>
             <span>{item.qty}</span>
             <button onClick={() => increaseQty(item.id)}>+</button>
           </div>
 
-          <p>₹{item.price * item.qty}</p>
+          <div className="cart-total">₹{item.price * item.qty}</div>
 
           <button className="remove" onClick={() => removeItem(item.id)}>
             Remove
@@ -34,13 +43,13 @@ const Cart = () => {
       ))}
 
       {cart.length > 0 && (
-        <>
+        <div className="cart-summary">
           <h3>Total: ₹{total}</h3>
 
           <Link to="/checkout" className="checkout-btn">
             Proceed to Checkout
           </Link>
-        </>
+        </div>
       )}
     </div>
   );
