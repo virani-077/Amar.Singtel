@@ -39,13 +39,13 @@ const products = [
   {
     id: 5,
     name: "Groundnut Oil 5L",
-    price: 1050,
+    price: 1100,
     image: p5
   },
   {
     id: 6,
     name: "Coconut Oil 5L",
-    price: 2050,
+    price: 3000,
     image: p6
   },
   {
@@ -63,13 +63,13 @@ const products = [
   {
     id: 9,
     name: "Groundnut Oil 1L",
-    price: 210,
+    price: 230,
     image: p9
   },
   {
     id: 10,
     name: "Coconut Oil 1L",
-    price: 400,
+    price: 650,
     image: p10
   },
   {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import products from "../../data/products";
 import banner from "../../assets/images/product2.jpeg";
@@ -16,6 +16,10 @@ const Home = () => {
   const prev = () => {
     setIndex((prev) => (prev === 0 ? products.length - 1 : prev - 1));
   };
+  useEffect(() => {
+    const timer = setInterval(next, 2000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <>
@@ -32,14 +36,14 @@ const Home = () => {
             </Link>
           </div>
           <div className="hero-image">
-            <img src={banner} alt="Amar Singtel Oils" />
+            <img src={banner} alt="Amar Singtel Oils" loading="lazy" />
           </div>
         </div>
       </section>
 
       {/* VIDEO BANNER */}
       <section className="video-banner">
-        <video autoPlay muted loop preload="none">
+        <video autoPlay muted loop playsInline preload="metadata">
           <source src={video} type="video/mp4" />
         </video>
         <div className="video-overlay">
@@ -91,14 +95,31 @@ const Home = () => {
           <button onClick={prev}>❮</button>
 
           <div className="carousel-card">
-            <img src={products[index].image} alt="" />
-            <h3>{products[index].name}</h3>
-            {/* <p>₹{products[index].price}</p> */}
+            {products.length > 0 && (
+              <>
+                <img
+                  src={products[index].image}
+                  alt={products[index].name}
+                  loading="lazy"
+                />
+                <h3>{products[index].name}</h3>
+              </>
+            )}
           </div>
 
           <button onClick={next}>❯</button>
         </div>
       </section>
+
+      {/* CTA
+      <section className="cta">
+        <div className="container">
+          <h2>Choose Health, Choose Amar Singtel</h2>
+          <Link to="/products" className="cta-btn">
+            Buy Now
+          </Link>
+        </div>
+      </section> */}
 
       {/* TESTIMONIALS */}
       <section className="testimonials">
@@ -154,16 +175,6 @@ const Home = () => {
               <p>Light on stomach and supports heart health.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta">
-        <div className="container">
-          <h2>Choose Health, Choose Amar Singtel</h2>
-          <Link to="/products" className="cta-btn">
-            Buy Now
-          </Link>
         </div>
       </section>
     </>

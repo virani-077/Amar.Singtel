@@ -1,24 +1,54 @@
 .checkout {
-    margin: 30px auto;
-  }
-  
+  margin: 40px auto;
+  padding: 0 15px;
+}
+
+.checkout h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-red);
+}
+
+.checkout-form {
+  background: #fff;
+  padding: 25px;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px; /* prevents mobile zoom */
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.checkout-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.checkout-form h3 {
+  margin: 15px 0;
+}
+
+.checkout-form button {
+  background: var(--primary-green);
+  color: #fff;
+  padding: 14px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+/* 📱 mobile polish */
+@media (max-width: 576px) {
   .checkout-form {
-    background: #fff;
     padding: 20px;
-    max-width: 500px;
   }
-  
-  .checkout-form input,
-  .checkout-form textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid var(--border-color);
-  }
-  
-  .checkout-form button {
-    background: var(--primary-green);
-    color: #fff;
-    padding: 10px;
-    width: 100%;
-  }
+}
